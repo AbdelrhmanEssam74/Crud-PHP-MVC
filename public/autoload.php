@@ -12,14 +12,13 @@ define("CONFIG", APP . 'Config' . DS);
 define("CONTROLLERS", APP . 'Controllers' . DS);
 define("MODELS", APP . 'Models' . DS);
 define("VIEWS", APP . 'Views' . DS);
-define("UPLOADS", ROOT_PATH . 'public' . DS . 'uploads' . DS);
 
 // Autoload all classes
 $modules = [ROOT_PATH, APP, CORE, VIEWS, CONTROLLERS, MODELS, CONFIG];
 // Add directories to the include path
 set_include_path(get_include_path() . PATH_SEPARATOR . implode(PATH_SEPARATOR, $modules));
 // Register the autoloader function
-spl_autoload_register('spl_autoload', false);
+spl_autoload_register('spl_autoload');
 
 // Instantiate the main application class
 new App();

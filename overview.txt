@@ -19,3 +19,7 @@ app/core
 public/
     - including index file
     - including assets folder
+autoload file:
+    -The code sets up constants for various directories within the application for easy access.
+    -It then creates an array of directories to be included in the include path for autoloading classes.
+    -The spl_autoload_register function is used to register the autoloader function which automatically includes classes when they are instantiated.

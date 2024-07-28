@@ -16,3 +16,14 @@ This project is a basic CRUD (Create, Read, Update, Delete) management system bu
 - CSS
 - JavaScript
 - JQuery
+
+## File Structure
+- **app/**
+  Contains the core files for the MVC structure.
+
+- **public/**
+  Contains the front-end assets (CSS, JavaScript).
+
+- **config/**
+  Configuration files for database connection and other settings.
+

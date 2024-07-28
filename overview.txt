@@ -1,0 +1,21 @@
+## Simple CRUD Management System Using MVC Concept in PHP ##
+############################################################
+Model-View-Controller
+=> user Sends a request to the controller
+=> the controller sends request information to the model
+=> the model sends a response information to the controller
+=> the controller sends data to the view
+=> the view sends a response to the user
+
+Project Structure
+app/
+    - including controllers folder
+    - including models folder
+    - including views folder
+    - including core folder
+    - including configuration folder
+app/core
+    -
+public/
+    - including index file
+    - including assets folder

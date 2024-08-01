@@ -15,7 +15,10 @@ app/
     - including core folder
     - including configuration folder
 app/core
-    -
+    - App.php:
+        -> manage the controller and handle the request for the controller
+    - View.php:
+        -> manage views files
 public/
     - including index file
     - including assets folder

@@ -16,4 +16,27 @@ class ProductController
     {
         View::load('Product/add'); // Load the add product view
     }
+
+    public function store(): void
+    {
+        if (isset($_POST['submit'])):
+            $product_name = $_POST['product'];
+            $product_price = $_POST['price'];
+            $product_desc = $_POST['description'];
+            $product_quantity = $_POST['quantity'];
+            $data = array(
+                "name" => $product_name,
+                "price" => $product_price,
+                "description" => $product_desc,
+                "quantity" => $product_quantity
+            );
+            $db = new product(); // Create a new instance of the product model
+            try {
+                $db->insert($data);
+                View::load("Product/add", ['success' => "Product added successfully"]);
+            } catch (Exception $e) {
+                View::load("Product/add");
+            }
+        endif;
+    }
 }

@@ -4,6 +4,7 @@ class HomeController
 {
     public function index($id): void
     {
-        View::load("home");
+        $data['title'] = "Home";
+        View::load("home" , $data);
     }
 }

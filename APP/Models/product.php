@@ -3,12 +3,19 @@
 
 class product extends DB
 {
-    private  string $table = 'product';
+    private string $table = 'products';
     private $conn;
-    public function __construct(){
+
+    public function __construct()
+    {
         $this->conn = $this->connect();
     }
-    public function getAllProduct(){
-        return $this->conn->get('products');
+
+    /**
+     * @throws Exception
+     */
+    public function getAllProduct(): MysqliDb|array|string|null
+    {
+        return $this->conn->get($this->table);
     }
 }

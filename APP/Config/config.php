@@ -1,4 +1,8 @@
 <?php
+/*
+ * APP URL
+ */
+define('APP_URL', 'http://curd.local/');
 /**
  * Database configuration
  */

@@ -13,9 +13,13 @@ define("CONTROLLERS", APP . 'Controllers' . DS);
 define("MODELS", APP . 'Models' . DS);
 define("VIEWS", APP . 'Views' . DS);
 define("LIBS", APP . 'Libs' . DS);
+define("Templates", VIEWS . '\includes\templates' . DS);
+define("Functions", VIEWS . '\includes\functions' . DS);
 require_once(CONFIG . 'config.php');
+// require functions
+require_once(Functions . 'helpers.php');
 // Autoload all classes
-$modules = [ROOT_PATH, APP, CORE, VIEWS, CONTROLLERS, MODELS, CONFIG , LIBS];
+$modules = [ROOT_PATH, APP, CORE, VIEWS, CONTROLLERS, MODELS, CONFIG, LIBS];
 // Add directories to the include path
 set_include_path(get_include_path() . PATH_SEPARATOR . implode(PATH_SEPARATOR, $modules));
 // Register the autoloader function

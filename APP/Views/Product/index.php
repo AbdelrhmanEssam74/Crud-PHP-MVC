@@ -1,16 +1,8 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Product Page</title>
-</head>
-<body>
+<?php include Templates . "header.php"; ?>
     <ul>
-        <?php /** @var array $products */
-        foreach ($products as $product): ?>
-            <li> <?php echo $product['name'] ?></li>
-        <?php endforeach; ?>
+<?php /** @var array $products */
+foreach ($products as $product): ?>
+    <li> <?php echo $product['name'] ?></li>
+<?php endforeach; ?>
     </ul>
-</body>
-</html>
+<?php include Templates . "footer.php"; ?>

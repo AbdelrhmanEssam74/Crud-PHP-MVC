@@ -1,7 +1,7 @@
 <?php include Templates . "header.php";
 /** @var TYPE_NAME $product */
 ?>
-    <h1 class="text-center  my-5 py-3">Add New Product</h1>
+    <h1 class="text-center  my-5 py-3">Edit Product</h1>
     <div class="container">
         <div class="row">
             <div class="col-10 mx-auto p-4 border mb-5">

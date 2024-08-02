@@ -22,6 +22,15 @@ class product extends DB
     /**
      * @throws Exception
      */
+    public function getProductByID($id): MysqliDb|array|string|null
+    {
+        $this->conn->where("id", $id);
+        return $this->conn->getOne($this->table);
+    }
+
+    /**
+     * @throws Exception
+     */
     public function insert($data): bool
     {
         return $this->conn->insert($this->table, $data);
@@ -34,5 +43,14 @@ class product extends DB
     {
         $db = $this->conn->where('id', $id);
         return $db->delete($this->table);
+    }
+
+    /**
+     * @throws Exception
+     */
+    public function update($id, $data): bool
+    {
+        $db = $this->conn->where('id', $id);
+        return $db->update($this->table, $data);
     }
 }

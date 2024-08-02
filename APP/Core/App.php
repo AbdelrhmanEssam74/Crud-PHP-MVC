@@ -42,12 +42,12 @@ class App
         if (class_exists($this->controller)):
             $controller = new $this->controller;
             if (method_exists($controller, $this->action)) {
-                call_user_func([$controller, $this->action] , $this->params);
+                call_user_func([$controller, $this->action], $this->params);
             } else {
-                echo " method not found";
+                call_user_func(['HomeController', "not_found"]);
             }
         else:
-            echo "This controller: " . $this->controller . " Not Found";
+            call_user_func(['HomeController', "not_found"]);
         endif;
     }
 }

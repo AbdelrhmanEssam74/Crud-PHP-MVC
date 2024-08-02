@@ -14,7 +14,8 @@ class ProductController
     // Loads the view for adding a new product
     public function add(): void
     {
-        View::load('Product/add'); // Load the add product view
+        $data['title'] = "Add Product"; // Set the title for the view
+        View::load('Product/add', $data); // Load the add product view
     }
 
     public function store(): void
@@ -69,6 +70,7 @@ class ProductController
     {
         $db = new product(); // Create a new instance of the product model
         $product_data['product'] = $db->getProductByID($id[2]);
+        $product_data['title'] = "Edit Product"; // Set the title for the view
         if ($product_data):
             View::load('Product/edit', $product_data);
         endif;

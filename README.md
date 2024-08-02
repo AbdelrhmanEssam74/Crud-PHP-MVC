@@ -14,6 +14,7 @@ This project is a basic CRUD (Create, Read, Update, Delete) management system bu
 - PHP
 - HTML
 - CSS
+- Bootstrap
 
 ## File Structure
 - **core/**

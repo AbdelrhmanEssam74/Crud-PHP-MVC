@@ -26,4 +26,13 @@ class product extends DB
     {
         return $this->conn->insert($this->table, $data);
     }
+
+    /**
+     * @throws Exception
+     */
+    public function delete($id): bool
+    {
+        $db = $this->conn->where('id', $id);
+        return $db->delete($this->table);
+    }
 }

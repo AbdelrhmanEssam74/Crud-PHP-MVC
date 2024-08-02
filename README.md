@@ -14,11 +14,9 @@ This project is a basic CRUD (Create, Read, Update, Delete) management system bu
 - PHP
 - HTML
 - CSS
-- JavaScript
-- JQuery
 
 ## File Structure
-- **app/**
+- **core/**
   Contains the core files for the MVC structure.
 
 - **public/**
@@ -27,3 +25,14 @@ This project is a basic CRUD (Create, Read, Update, Delete) management system bu
 - **config/**
   Configuration files for database connection and other settings.
 
+- **libs/**
+  Contains additional libraries or external dependencies.
+
+- **models/**
+  Holds model classes like Product.php, representing the data logic for the application.
+
+- **views/**
+  Organizes view files, with subfolders for different entities like Product/ containing view files for product-related views.
+
+- **controllers/**
+  Stores controller classes like ProductController.php, which handle user requests, interact with models, and load views.

@@ -64,4 +64,44 @@ class ProductController
             echo "Error deleting product";
         }
     }
+
+    public function edit($id): void
+    {
+        $db = new product(); // Create a new instance of the product model
+        $product_data['product'] = $db->getProductByID($id[2]);
+        if ($product_data):
+            View::load('Product/edit', $product_data);
+        endif;
+    }
+
+    public function update($id): void
+    {
+        // Check if the form is submitted
+        if (isset($_POST['submit'])):
+            // Get form data
+            $product_name = $_POST['product'];
+            $product_price = $_POST['price'];
+            $product_desc = $_POST['description'];
+            $product_quantity = $_POST['quantity'];
+            // Prepare data array
+            $productData = array(
+                "name" => $product_name,
+                "price" => $product_price,
+                "description" => $product_desc,
+                "quantity" => $product_quantity
+            );
+            try {
+                $db = new product(); // Create a new instance of the product model
+                // update data into the database
+                $db->update($id[2], $productData);
+                // If product is deleted successfully
+                $data['products'] = $db->getAllProduct(); // Fetch all products from the database
+                $data['success'] = "Product updated successfully";
+                View::load("Product/index", $data);
+            } catch (Exception $e) {
+                // Handle exceptions
+                View::load("Product/index");
+            }
+        endif;
+    }
 }

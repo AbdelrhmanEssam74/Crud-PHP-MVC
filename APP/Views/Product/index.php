@@ -27,7 +27,7 @@
                             <td> <?php echo $i; $i++; ?></td>
                             <td><?php echo $row['name']; ?></td>
                             <td><?php echo $row['price']; ?> <b class="float-right"> $ </b></td>
-                            <td class="text-center"><?php echo $row['description']; ?></td>
+                            <td class="text-start"><?php echo $row['description']; ?></td>
                             <td><?php echo $row['quantity']; ?></td>
                             <td>
                                 <a href="<?php url('product/edit/'.$row['id']) ?>" class="btn btn-info" >Edit</a>

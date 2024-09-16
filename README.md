@@ -11,29 +11,23 @@ This project is a basic CRUD (Create, Read, Update, Delete) management system bu
 - Error handling to provide meaningful feedback to users
 
 ## Technologies Used
-- PHP
-- HTML
-- CSS
-- Bootstrap
+[![My Skills](https://skillicons.dev/icons?i=js,bootstrap,html,css,php)](https://skillicons.dev)
 
 ## File Structure
-- **core/**
-  Contains the core files for the MVC structure.
+    .
+    ├── core                    # Contains the core files for the MVC structure.
+    ├── public                  # Contains the front-end assets (CSS, JavaScript).
+    ├── config                  # Contains additional libraries or external dependencies.
+    ├── libs                    # Automated tests (alternatively `spec` or `tests`)
+    ├── models                  # Holds model classes like Product.php, representing the data logic for the application.
+    ├── views                   # Stores controller classes like ProductController.php, which handle user requests, interact with models, and load views.
+    └── controllers
 
-- **public/**
-  Contains the front-end assets (CSS, JavaScript).
+## Screenshot
+<div style="display: flex;">
+  <img src="https://github.com/user-attachments/assets/e03383b7-0d75-42b3-92f3-37fa0664e209" alt="Screenshot 1" style="width: 500px; height: auto; margin-right: 10px;">
+  <img src="https://github.com/user-attachments/assets/47c099b2-d335-4046-a7af-88b15b140b55" alt="Screenshot 2" style="width: 500px; height: auto;">
+</div>
 
-- **config/**
-  Configuration files for database connection and other settings.
-
-- **libs/**
-  Contains additional libraries or external dependencies.
-
-- **models/**
-  Holds model classes like Product.php, representing the data logic for the application.
-
-- **views/**
-  Organizes view files, with subfolders for different entities like Product/ containing view files for product-related views.
-
-- **controllers/**
-  Stores controller classes like ProductController.php, which handle user requests, interact with models, and load views.
+## Contributing
+We welcome contributions! If you'd like to contribute to this project, please fork the repository and submit a pull request with your changes.
